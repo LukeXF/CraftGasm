@@ -1,0 +1,32 @@
+#
+#	  Author :		Luke Brown
+#	  License:  	Permission based - ask me first before using.
+#	  Created: 		September 2014
+#	  Contact:		me@luke.sx
+#
+
+RewriteEngine On
+Options -Indexes
+ErrorDocument 403 http://demo.luke.sx/craftgasm/
+ErrorDocument 404 http://demo.luke.sx/craftgasm/
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# sets the true header of a web page
+<FilesMatch "\.(?i:xml)$">
+      ForceType application/octet-stream
+      Header set Content-Disposition attachment
+</FilesMatch>
+
+
+# to protect configurations.php
+<Files configurations.php>
+order allow,deny
+deny from all
+</Files>
+
+# don't touch /assets URIs
+RewriteRule ^assets/ - [L,NC]
