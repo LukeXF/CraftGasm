@@ -101,7 +101,7 @@ header( 'Pragma: no-cache' );
 					if(isset($_POST['email'])) {
 						 // EDIT THE 2 LINES BELOW AS REQUIRED
 					 
-						 $email_to = $email_to;
+						 $email_to = "me@luke.sx";
 						 $email_subject = "Email form from Craft Gasm website from " . $email_from;
 					 
 						 function died($error) {
@@ -159,10 +159,10 @@ header( 'Pragma: no-cache' );
 					 
 							
 					 
-						 $email_message .= "First Name: ".clean_string($first_name)."\n";
+						 $email_message .= "<b>First Name:</b> ".clean_string($first_name)."\n";
 						 $email_message .= "Last Name: ".clean_string($last_name)."\n";
 						 $email_message .= "Email: ".clean_string($email_from)."\n";
-						 $email_message .= "Reason: (adding reason tomorrow)".clean_string($telephone)."\n";
+						 $email_message .= "Telephone: ".clean_string($telephone)."\n";
 						 $email_message .= "Comments: ".clean_string($comments)."\n";
 						 
 					 
@@ -189,28 +189,9 @@ header( 'Pragma: no-cache' );
 			</div>
 		</div>
 	</div>
-	<?php // 	Footer		?>
-	<footer class="page-footer group h6">
-		<div class="container">
-			<div class="grid grid--middle">
-				<div class="grid__item" style="width:33%">
-					<p>© 2014 Elements, LLC. · <a href="terms.php">Terms of Service</a></p>
-				</div>
-				<div class="grid__item" style="width:33%">
-					Copyright Craft Gasm, 2014
-				</div>
-				<div class="grid__item sneakyhiddenstuff" style="width:33%">
-					Designed by <a href="http://luke.sx">Luke Brown</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-		
 </body>
 </html>
+
 <?php
 }
 //header( 'Location: http://gillian-allard.com/contact.php?success' )

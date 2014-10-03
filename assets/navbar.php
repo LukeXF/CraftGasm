@@ -6,6 +6,7 @@
 			</div>
 			<nav id="main-nav" class="main-nav">
 				<ul class="main-nav__list">
+					<nav class="navbar navbar-default" role="navigation">
 					<?php
 
 						// Sets the active tab
@@ -59,8 +60,20 @@
 									echo "<a>" . $x . " <i class='fa fa-caret-down'></i></a>";
 									echo "<ul>";
 									// echos the submenu
-									foreach($x_value["submenu"][0] as $y => $y_value) {
-										echo "<li><a href='" . $url . "'>" . $x_value["submenu"][0][1] . "</a></li>";
+									foreach($x_value["submenu"] as $y => $y_value) {
+											/* 
+												if the url array in the main associative array is defined
+												then echo it. This is if you need to use an external link
+												that does not match the array key.
+											*/
+											if (!empty($y_value)) {
+												// set $suburl to echo content
+												$suburl = $y_value;
+											} else {
+												// else set it to the associative name
+												$suburl = $y;
+											}
+										echo "<li><a href='" . $suburl . "'>" . $y . "</a></li>";
 									}
 									echo "</ul>";
 								echo "</li>";
@@ -73,8 +86,15 @@
 							}
 						}
 					?>
+				</nav>
 				</ul>
 			</nav>
+			<div class="checkout">
+				<div class="dropdown">
+					<input type="text" class="button button--small button--disabled" onfocus="this.select();" onmouseup="return false;" readonly=readonly value="play.CraftGasm.net" data-toggle="tooltip" data-placement="bottom" title="Click text to select all, then copy and paste into your minecraft client" />
+				</div>
+			</div>
+
 
 		</div>
 	</div>

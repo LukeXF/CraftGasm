@@ -5,6 +5,9 @@
 	include('assets/time.php'); // The time frame selector to search by minutes
 	include('assets/send.php'); // Makes the magic happen!
 
+	session_start();
+	include("assets/captcha/simple-php-captcha.php");
+	$_SESSION['captcha'] = simple_php_captcha();
 ?>
 <!-- 	
 	This code and project was developed under contact by NivanaMC
@@ -19,7 +22,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
 	<link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
 	<link rel="shortcut icon" href="/assets/img/favicon.ico">
 	<script type="text/javascript" src="js/lukebrown-ajax.min.js"></script>
@@ -31,6 +34,9 @@
 <div class="page-wrap">
 
 <?php
+	// In seconds the minimum time allowed between email forms before they will send.
+	$email_timer = 12;
+	$email_to = "cam@elmnts.co";
 	// Sets the values for the navbar
 	$navbar = array(
 		"home" =>   array(
@@ -74,9 +80,8 @@
 			"url" => "",          
 			"submenu" => 
 				array(
-						"MailSupport" => "", 
-						"Skyblock"     => "", 
-						"Factions"     => "" 
+					"FAQ" => "faq", 
+					"Mail Support"     => "contact"
 				)
 		),
 

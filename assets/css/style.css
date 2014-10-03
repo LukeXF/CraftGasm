@@ -1543,13 +1543,13 @@ body {
 }
 
 .bigEntrance {
-animation-name: bigEntrance;
--webkit-animation-name: bigEntrance;
-animation-duration: 1.6s;
--webkit-animation-duration: 1.6s;
-animation-timing-function: ease-out;
--webkit-animation-timing-function: ease-out;
-visibility: visible !important;
+    animation-name: bigEntrance;
+    -webkit-animation-name: bigEntrance;
+    animation-duration: 1.6s;
+    -webkit-animation-duration: 1.6s;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    visibility: visible !important;
 }
 
 .main-nav__list > li > ul {
@@ -1568,17 +1568,19 @@ footer {
 .page-wrap {
     min-height: 100%;
     padding-bottom: 30px;
-    margin-bottom: -100px;
+    margin-bottom: -99px;
+    background-color: #f6f6f6;
 }
 
 .page-footer {
-    margin-top: 28px;
+    margin-top: 26px;
     padding: 28px;
     text-align: center;
 }
 
 html, body {
     height: 100%;
+    background-color: #f6f6f6;
 }
 
 
@@ -1618,4 +1620,167 @@ img.img-responsive.slideUp.noShow {
     color: white;
     margin-left: auto;
     margin-right: auto;
+}
+
+.navonright {
+    float: right
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navonright li {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 100px;
+    text-align: center;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    border-radius: 2px;
+    background-color: rgba(201,213,225,.05);
+}
+
+.navonright li a {
+    padding: 12px 24px;
+    border-radius: 2px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input.button.button--small.button--disabled {
+    width: 244px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 11.5px;
+    margin-top: -10px;
+    -webkit-transition: background-color 0.3s ease-in;
+    border-radius: 2px;
+    background-color: rgba(201,213,225,.05) !important;
+    border: transparent;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.99) !important;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, input[type=url]:focus, select:focus, textarea:focus {
+    border-color: transparent;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.38);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.36);
+}
+
+input.button.button--small.button--disabled:hover {
+    color: #FFF;
+    text-decoration: none !important !important;
+    background-color: #8e44ad !important;
+}
+
+.main-nav__list li a:focus, .main-nav__list li a:hover, .main-nav__list li.current>a, input.button.button--small.button--disabled:hover {
+color: #fff;
+background-color: #8e44ad !important;
+}
+
+
+.page-head__bar {
+    display: table;
+    white-space: nowrap;
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 0px;
+}
+
+.main-nav__list li {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 100px;
+    text-align: center;
+    margin-right: 8px;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    background-color: rgba(201,213,225,.05);
+}
+
+.btn-home:hover {
+color: #fff !important;
+background-color: rgb(89, 6, 128) !important;
+-webkit-transition: background-color 0.3s ease-in;
+}
+
+h5.top-notice {
+    text-align: center;
+    margin-top: -43px;
+    font-weight: 100;
+    padding: 30px;
+    font-family: "Open Sans",Helvetica,sans-serif;
+    background-color: white;
+    margin-bottom: 2px;
+    vertical-align: bottom !important;
+}
+
+h5.top-notice > b {
+    margin: -2px;
+    font-weight: bold;
+}
+
+.profile {
+    background: #fff;
+    margin: 20px;
+    padding: 10px 10px 4px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 130px;
+    max-height: 130px;
+}
+
+.profile > img {
+    float: left;
+    margin: -10px 10px -10px 9px;
+}
+
+.profile > h3 {
+    margin: 0;
+    font-weight: 100;
+    font-family: "Open Sans",Helvetica,sans-serif;
+    vertical-align: bottom !important;
+}
+
+.profile > p {
+    margin: 0;
+    text-align: left;
+}
+
+.profile > h3 > i {
+    font-weight: 400;
+    margin-top: -2px;
+}
+
+h2.faq {
+    margin-bottom: 0;
+    font-weight: 100;
+    font-family: "Open Sans",Helvetica,sans-serif;
+    vertical-align: bottom !important;
+}
+
+.notanswered {
+    margin-bottom: 0;
+    font-weight: 100;
+    font-family: "Open Sans",Helvetica,sans-serif;
+    text-align: center;
+    color: #222;
+}
+
+h3.notanswered {
+    margin-top: 20px;
+}
+
+h5.notanswered, h5.notanswered > a {
+    color: #444;
+    text-decoration: none;
+}
+
+textarea#message {
+    min-width: 100% !important;
+    max-width: 100% !important;
 }
